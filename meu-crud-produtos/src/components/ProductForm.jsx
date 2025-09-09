@@ -1,5 +1,5 @@
-import React, { use, useEffect, useState } from "react";
-import { Form, Button } from "react-boostrap";
+import React, { useEffect, useState } from "react";
+import { Form, Button } from "react-bootstrap";
 import api from "../services/api"; 
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -22,7 +22,7 @@ export default function ProductForm() {
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
-        setProduct({ ...product, [name]: type === "checkbox" ? checked : value});
+        setProduct({ ...product, [name]: name === "preco" ? Number(value) : type === "checkbox" ? checked : value});
     };
 
     const handleSubmit = async (e) => {
@@ -56,7 +56,7 @@ export default function ProductForm() {
                     checked={product.ativo} onChange={handleChange}/>
                 </Form.Group>
 
-                <Button type="submit"variant="success">Salvar</Button>
+                <Button type="submit" variant="success">Salvar</Button>
                 </Form>
         </div>
     );

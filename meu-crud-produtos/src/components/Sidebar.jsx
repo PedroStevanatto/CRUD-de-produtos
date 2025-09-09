@@ -7,7 +7,7 @@ export default function Sidebar() {
         <h5>Menu</h5>
         <ul className="list-unstyled">
             <li><Link to="/">Dashboard</Link></li>
-            <li><Link to="/add">Produtos</Link></li>
+            <li><Link to="/products">Produtos</Link></li>
         </ul>
     </div>
   );

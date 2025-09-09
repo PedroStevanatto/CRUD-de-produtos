@@ -5,7 +5,7 @@ export default function AppNavbar() {
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand>📦 Product CRUD</Navbar.Brand>
+        <Navbar.Brand>📦 CRUD Produtos</Navbar.Brand>
       </Container>
     </Navbar>
   );
